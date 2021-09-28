@@ -1,0 +1,10 @@
+<%-include('header.html')%>
+<div class="container">
+    <h2>数据调用渲染实例</h2>
+    <ul class="list-group">
+        <%list.forEach(r=>{%>
+        <li class="list-group-item"><a href="about-detail-<%=r.id%>.html"><%=r.info.title%></a></li>
+      <%})%>
+    </ul>
+  </div>
+<%-include('footer.html')%>

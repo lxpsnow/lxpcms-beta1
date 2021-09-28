@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">Navbar</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <%nav.forEach(r=>{%>
+      <li class="nav-item dropdown">
+        <%if(r.child){%>
+            <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+        <%}else{%>
+            <a class="nav-link" href="/"> 
+        <%}%>
+          <%=r.name%>
+        </a>
+        <%if(r.child){%>
+        <div class="dropdown-menu">
+          <%r.child.forEach(r=>{%>
+          <a class="dropdown-item" href="#"><%=r.name%></a>
+          <%})%>
+        </div>
+        <%}%>
+      </li>
+      <%})%>
+    </ul>
+  </nav>
