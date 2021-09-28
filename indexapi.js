@@ -8,11 +8,11 @@ let api = {
         return sql;
     },
     getnav : ()=>{
-        let sql = 'select * from feiyu_contentmodel where agent = 0 order by sort'
+        let sql = 'select * from feiyu_contentmodel where agent = 0 and isnav = 1 order by sort'
         return sql;
     },
     getallnav : ()=>{
-        let sql = 'select * from feiyu_contentmodel where agent != 0 order by sort'
+        let sql = 'select * from feiyu_contentmodel where agent != 0 and isnav = 1 order by sort'
         return sql;
     },
     getchildnav : (id)=>{
